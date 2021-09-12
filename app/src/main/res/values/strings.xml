@@ -22,4 +22,6 @@
     <string name="cuci_tangan">Cuci Tangan</string>
     <string name="pakai_masker">Pakai Masker</string>
     <string name="jaga_jarak">Jaga Jarak</string>
+    <string name="lihat_item_tersimpan_disini">Lihat Item Berita Yang Kamu Simpan/Bookmark Disini</string>
+    <string name="loading___">LOADING...</string>
 </resources>

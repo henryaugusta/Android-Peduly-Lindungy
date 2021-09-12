@@ -2,7 +2,6 @@ package com.feylabs.core.di
 
 import com.feylabs.core.domain.usecase.NewsInteractor
 import com.feylabs.core.domain.usecase.NewsUseCase
-import com.feylabs.lindungipeduli.ui.MainViewModel
 import com.feylabs.lindungipeduli.ui.home.HomeViewModel
 import com.feylabs.lindungipeduli.ui.news.NewsViewModel
 import org.koin.android.viewmodel.dsl.viewModel
@@ -14,7 +13,6 @@ val useCaseModule = module {
 }
 
 val viewModelModule = module {
-    viewModel { MainViewModel(get()) }
     viewModel { HomeViewModel(get()) }
     viewModel { NewsViewModel(get()) }
 }

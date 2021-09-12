@@ -64,6 +64,10 @@ class HomeFragment : Fragment() {
 
         })
 
+        binding.containerBookmark.setOnClickListener {
+            findNavController().navigate(R.id.favoriteFragment)
+        }
+
 
         homeViewModel.news.observe(viewLifecycleOwner, Observer {
             when (it) {
