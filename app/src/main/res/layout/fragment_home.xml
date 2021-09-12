@@ -310,7 +310,7 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
@@ -368,6 +368,11 @@
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <include
+        android:id="@+id/include_loading"
+        android:visibility="gone"
+        layout="@layout/layout_loading_screen"/>
 
 
 </RelativeLayout>

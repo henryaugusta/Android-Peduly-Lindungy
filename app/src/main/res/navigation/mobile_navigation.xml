@@ -22,4 +22,9 @@
         android:name="com.feylabs.lindungipeduli.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        tools:layout="@layout/fragment_news_detail"
+        android:name="com.feylabs.lindungipeduli.ui.news.NewsDetailFragment"
+        android:label="@string/title_detail_berita" />
 </navigation>

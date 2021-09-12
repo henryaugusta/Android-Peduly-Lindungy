@@ -21,4 +21,8 @@
     <string name="sembuh">Sembuh</string>
     <string name="langkah_pencegahan">Langkah Pencegahan</string>
     <string name="_3_langkah_pencegahan">3 Langkah Pencegahan</string>
+    <string name="title_detail_berita">Detail Berita</string>
+    <string name="ditulis_oleh">\"Ditulis Oleh \"</string>
+    <string name="peduly_lindungy">Peduly Lindungy</string>
+    <string name="aplikasi_informasi_covid_19_indonesia_raya">Aplikasi Informasi Covid 19 Indonesia Raya</string>
 </resources>

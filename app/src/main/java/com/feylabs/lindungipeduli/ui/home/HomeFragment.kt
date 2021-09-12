@@ -5,13 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.tourismapp.core.data.Resource
+import com.feylabs.lindungipeduli.R
 import com.feylabs.lindungipeduli.core.domain.model.News
 import com.feylabs.lindungipeduli.databinding.FragmentHomeBinding
+import com.feylabs.lindungipeduli.ui.news.NewsDetailFragment.Companion.NEWS_ARG
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -47,9 +52,14 @@ class HomeFragment : Fragment() {
             adapter = newsAdapter
         }
 
-        newsAdapter.setAdapterInterfacez(obj = object  : NewsAdapter.NewsItemInterface{
+        newsAdapter.setAdapterInterfacez(obj = object : NewsAdapter.NewsItemInterface {
             override fun onclick(model: News?) {
-
+                findNavController().navigate(
+                    R.id.newsDetailFragment,
+                    bundleOf(
+                        NEWS_ARG to model,
+                    )
+                )
             }
 
         })
@@ -62,10 +72,16 @@ class HomeFragment : Fragment() {
                     newsAdapter.notifyDataSetChanged()
                 }
                 is Resource.Error -> {
+                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                 }
-                is Resource.Loading -> {
+                else -> {
+                }//Do Nothing
+            }
 
-                }
+            if (it is Resource.Loading) {
+                binding.includeLoading.root.visibility = View.VISIBLE
+            } else {
+                binding.includeLoading.root.visibility = View.GONE
             }
 
         })
