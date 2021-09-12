@@ -1,4 +1,4 @@
-package com.feylabs.lindungipeduli.core.domain
+package com.feylabs.lindungipeduli.core.domain.model
 
 data class News(
     val id:String,
