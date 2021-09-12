@@ -13,10 +13,8 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
 
     private val result = PublishSubject.create<Resource<ResultType>>()
     private val mCompositeDisposable = CompositeDisposable()
-//    private val result = MediatorLiveData<Resource<ResultType>>()
 
     init {
-//        result.value = Resource.Loading(null)
 
         @Suppress("LeakingThis")
         val dbSource = loadFromDB()
@@ -32,17 +30,6 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
                 }
             }
         mCompositeDisposable.add(db)
-
-//        result.addSource(dbSource) { data ->
-//            result.removeSource(dbSource)
-//            if (shouldFetch(data)) {
-//                fetchFromNetwork(dbSource)
-//            } else {
-//                result.addSource(dbSource) { newData ->
-//                    result.value = Resource.Success(newData)
-//                }
-//            }
-//        }
 
     }
 
