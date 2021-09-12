@@ -8,6 +8,8 @@ interface INewsRepository {
 
     fun getNews(): Flowable<Resource<List<News>>>
 
+    fun checkIfFavorite(id:String): Flowable<Boolean> // only for favorite checking
+
     fun getFavoriteNews(): Flowable<List<News>>
 
     fun setFavoriteNews(news: News, state: Boolean)

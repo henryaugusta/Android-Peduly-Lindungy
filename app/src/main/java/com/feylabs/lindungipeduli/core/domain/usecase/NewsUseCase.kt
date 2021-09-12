@@ -10,5 +10,6 @@ interface NewsUseCase {
     fun getAllNews(): Flowable<Resource<List<News>>>
     fun getFavoriteNews(): Flowable<List<News>>
     fun setFavoriteNews(news: News, state: Boolean)
+    fun checkIfFavorite(id:String) : Flowable<Boolean>
 
 }

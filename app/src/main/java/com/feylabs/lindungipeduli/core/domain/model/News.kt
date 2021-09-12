@@ -12,4 +12,5 @@ data class News(
     val content :String,
     val cover_pict_url :String,
     val created_at :String,
+    var is_favorite :Boolean
 ) : Parcelable

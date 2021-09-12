@@ -25,4 +25,7 @@
     <string name="ditulis_oleh">\"Ditulis Oleh \"</string>
     <string name="peduly_lindungy">Peduly Lindungy</string>
     <string name="aplikasi_informasi_covid_19_indonesia_raya">Aplikasi Informasi Covid 19 Indonesia Raya</string>
+    <string name="illegal_state">Illegal State</string>
+    <string name="not_yet_bookmark">Belum ditambahkan ke bookmark anda</string>
+    <string name="already_added">Telah ada di bookmark anda</string>
 </resources>

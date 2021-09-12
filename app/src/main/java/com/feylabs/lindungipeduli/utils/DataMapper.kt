@@ -15,7 +15,8 @@ object DataMapper {
             author = it.author,
             created_at = it.created_at,
             cover_pict_url = it.cover_pict_url,
-            title = it.title
+            title = it.title,
+            is_favorite = it.is_favorite
         )
     }
 

@@ -21,5 +21,11 @@ class NewsInteractor
         newsRepository.setFavoriteNews(news, state)
     }
 
+    override fun checkIfFavorite(id: String): Flowable<Boolean> {
+        return newsRepository.checkIfFavorite(id)
+    }
+
+
+
 
 }

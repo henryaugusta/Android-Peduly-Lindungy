@@ -51,6 +51,10 @@ class NewsRepository(
 
         }.asFlowable()
 
+    override fun checkIfFavorite(id: String): Flowable<Boolean> {
+        return localDataSource.checkIfFavorite(id)
+    }
+
     override fun getFavoriteNews(): Flowable<List<News>> {
         return localDataSource.getFavoriteNews().map {
             DataMapper.newsEntitiesToDomain(it)

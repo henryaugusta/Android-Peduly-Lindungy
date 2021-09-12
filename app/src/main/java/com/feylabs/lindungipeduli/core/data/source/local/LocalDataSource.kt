@@ -22,6 +22,9 @@ class LocalDataSource(
 
     fun getAllNews(): Flowable<List<NewsEntity>> = myRoomDatabase.newsDao().getAllNews()
 
+    fun checkIfFavorite(id: String): Flowable<Boolean> =
+        myRoomDatabase.newsDao().checkIfFavorite(id)
+
     fun getFavoriteNews(): Flowable<List<NewsEntity>> = myRoomDatabase.newsDao().getFavoriteNews()
 
     fun insertNews(newsList: List<NewsEntity>) = myRoomDatabase.newsDao().insertNews(newsList)
