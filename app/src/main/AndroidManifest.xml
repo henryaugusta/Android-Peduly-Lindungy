@@ -14,7 +14,7 @@
         android:theme="@style/Theme.LindungiPeduli"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.MainMenuContainer"
+            android:name=".ui.MainMenuContainerActivity"
             android:exported="true"
             android:label="@string/title_activity_main_menu_container"
             android:theme="@style/Theme.LindungiPeduli.NoActionBar" >

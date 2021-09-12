@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_sawit_card_header" />
+        android:contentDescription="@string/content_desc"
+        android:src="@drawable/card_header" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,7 +48,8 @@
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/sudah_vaksin"
                     android:textColor="@color/colorWhite"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    tools:ignore="RelativeOverlap" />
 
                 <TextView
                     android:id="@+id/txt2"
@@ -79,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:orientation="horizontal"
+                android:visibility="gone"
                 app:cardCornerRadius="20dp">
 
                 <LinearLayout
@@ -210,7 +213,7 @@
                                 android:fontFamily="@font/roboto_regular"
                                 android:text="@string/sembuh"
                                 android:textColor="@color/colorTextSecondary"
-                                android:textSize="12dp" />
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/recovered_new"
@@ -227,147 +230,128 @@
 
 
             <androidx.cardview.widget.CardView
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="20dp">
 
-                <TextView
-                    android:id="@+id/label_prevent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:fontFamily="@font/philosopher_b"
-                    android:text="@string/_3_langkah_pencegahan"
-                    android:textColor="@color/color_blue_mine"
-                    android:textSize="24sp" />
-
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/label_prevent"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
-                    <RelativeLayout
-                        android:layout_marginRight="10dp"
+                    <TextView
+                        android:id="@+id/label_prevent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/philosopher_b"
+                        android:text="@string/_3_langkah_pencegahan"
+                        android:textColor="@color/color_blue_mine"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center">
+                        android:layout_below="@id/label_prevent"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
 
-                        <ImageView
-                            android:id="@+id/img_prevent1"
-                            android:layout_width="wrap_content"
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/xd_prevent1" />
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <ImageView
+                                android:id="@+id/img_prevent1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/content_desc"
+                                android:src="@drawable/xd_prevent1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/img_prevent1"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/cuci_tangan"
+                                android:textColor="@color/xdGreenMain" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/img_prevent1"
-                            android:layout_centerInParent="true"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Cuci Tangan"
-                            android:textColor="@color/xdGreenMain" />
+                            android:layout_weight="1"
+                            android:gravity="center">
 
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/img_prevent2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/content_desc"
+                                android:src="@drawable/xd_prevent2" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/img_prevent2"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/pakai_masker"
+                                android:textColor="@color/xdGreenMain" />
 
-                        <ImageView
-                            android:id="@+id/img_prevent2"
-                            android:layout_width="wrap_content"
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/xd_prevent2" />
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/img_prevent2"
-                            android:layout_centerInParent="true"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Pakai Masker"
-                            android:textColor="@color/xdGreenMain" />
+                            <ImageView
+                                android:id="@+id/img_prevent3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerInParent="true"
+                                android:contentDescription="@string/content_desc"
+                                android:src="@drawable/xd_prevent3" />
 
-                    </RelativeLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/img_prevent3"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/jaga_jarak"
+                                android:textColor="@color/xdGreenMain" />
 
-                    <RelativeLayout
-                        android:layout_marginStart="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                        </RelativeLayout>
 
-                        <ImageView
-                            android:id="@+id/img_prevent3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/xd_prevent3" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/img_prevent3"
-                            android:layout_centerInParent="true"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="Jaga Jarak"
-                            android:textColor="@color/xdGreenMain" />
-
-                    </RelativeLayout>
-
-                </LinearLayout>
+                    </LinearLayout>
 
 
-            </RelativeLayout>
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="10dp"
-            app:cardCornerRadius="20dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <include
         android:id="@+id/include_loading"

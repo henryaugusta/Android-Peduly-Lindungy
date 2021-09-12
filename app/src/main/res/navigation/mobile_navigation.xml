@@ -12,19 +12,15 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.feylabs.lindungipeduli.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.feylabs.lindungipeduli.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-    <fragment
         android:id="@+id/newsDetailFragment"
         tools:layout="@layout/fragment_news_detail"
         android:name="com.feylabs.lindungipeduli.ui.news.NewsDetailFragment"
         android:label="@string/title_detail_berita" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.feylabs.favorite.FavoriteFragment"
+        android:label="Bookmarks"
+        tools:layout="@layout/favorite_fragment" />
+
 </navigation>
