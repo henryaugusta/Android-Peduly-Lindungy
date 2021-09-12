@@ -13,5 +13,13 @@ class NewsInteractor
         return newsRepository.getNews()
     }
 
+    override fun getFavoriteNews(): Flowable<List<News>> {
+        return newsRepository.getFavoriteNews()
+    }
+
+    override fun setFavoriteNews(news: News, state: Boolean) {
+        newsRepository.setFavoriteNews(news, state)
+    }
+
 
 }
