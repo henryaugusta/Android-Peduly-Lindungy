@@ -8,13 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.feylabs.lindungipeduli.R
-import com.feylabs.lindungipeduli.core.domain.model.News
+import com.feylabs.core.domain.model.News
 import com.feylabs.lindungipeduli.databinding.FragmentNewsDetailBinding
-import com.feylabs.lindungipeduli.utils.MyHelper
-import android.view.MotionEvent
+import com.feylabs.core.utils.MyHelper
 
-import android.view.View.OnTouchListener
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import org.koin.android.viewmodel.ext.android.viewModel
 

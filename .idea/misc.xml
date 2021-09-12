@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/LindungiPeduli/CORE/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.11458333333333333" />
+        <entry key="..\:/AndroidStudioProjects/LindungiPeduli/CORE/src/main/res/layout/item_news.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/LindungiPeduli/app/src/main/res/drawable/ic_bookmark.xml" value="0.1546875" />
         <entry key="..\:/AndroidStudioProjects/LindungiPeduli/app/src/main/res/drawable/ic_card_sawit_2.xml" value="0.1625" />
         <entry key="..\:/AndroidStudioProjects/LindungiPeduli/app/src/main/res/drawable/ic_golapak_logo.xml" value="0.1625" />

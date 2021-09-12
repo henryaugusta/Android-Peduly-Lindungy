@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.tourismapp.core.data.Resource
 import com.feylabs.lindungipeduli.R
-import com.feylabs.lindungipeduli.core.domain.model.News
+import com.feylabs.core.domain.model.News
 import com.feylabs.lindungipeduli.databinding.FragmentHomeBinding
 import com.feylabs.lindungipeduli.ui.news.NewsDetailFragment.Companion.NEWS_ARG
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
         }
 
         newsAdapter.setAdapterInterfacez(obj = object : NewsAdapter.NewsItemInterface {
-            override fun onclick(model: News?) {
+            override fun onclick(model: com.feylabs.core.domain.model.News?) {
                 findNavController().navigate(
                     R.id.newsDetailFragment,
                     bundleOf(

@@ -5,16 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.feylabs.lindungipeduli.R
-import com.feylabs.lindungipeduli.core.domain.model.News
-import com.feylabs.lindungipeduli.databinding.ItemNewsBinding
+import com.feylabs.core.R
+import com.feylabs.core.databinding.ItemNewsBinding
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    val data = mutableListOf<News>()
+    val data = mutableListOf<com.feylabs.core.domain.model.News>()
     lateinit var adapterInterface: NewsItemInterface
 
-    fun setWithNewData(data: MutableList<News>) {
+    fun setWithNewData(data: MutableList<com.feylabs.core.domain.model.News>) {
         this.data.clear()
         this.data.addAll(data)
     }
@@ -27,7 +26,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
         var binding: ItemNewsBinding = ItemNewsBinding.bind(itemView)
 
-        fun onBInd(model: News?) {
+        fun onBInd(model: com.feylabs.core.domain.model.News?) {
             binding.tvMain.text = model?.title
 
             binding.root.setOnClickListener {
@@ -56,6 +55,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     }
 
     interface NewsItemInterface {
-        fun onclick(model: News?)
+        fun onclick(model: com.feylabs.core.domain.model.News?)
     }
 }
