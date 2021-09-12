@@ -6,6 +6,10 @@ import io.reactivex.Flowable
 
 interface INewsRepository {
 
-    fun getNews() : Flowable<Resource<List<News>>>
+    fun getNews(): Flowable<Resource<List<News>>>
+
+    fun getFavoriteNews(): Flowable<List<News>>
+
+    fun setFavoriteNews(news: News, state: Boolean)
 
 }
