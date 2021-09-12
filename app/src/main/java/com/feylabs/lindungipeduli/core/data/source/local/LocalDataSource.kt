@@ -6,8 +6,7 @@ import com.feylabs.lindungipeduli.core.data.source.local.room.MyRoomDatabase
 import com.feylabs.lindungipeduli.core.data.source.local.room.NewsDao
 import io.reactivex.Flowable
 
-class LocalDataSource
-private constructor(
+class LocalDataSource(
     private val context: Context,
     private val myRoomDatabase: MyRoomDatabase
 ) {

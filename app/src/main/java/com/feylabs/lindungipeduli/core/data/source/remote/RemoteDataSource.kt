@@ -12,7 +12,7 @@ import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
 
 @SuppressLint("CheckResult")
-class RemoteDataSource private constructor(private val apiService: ApiService) {
+class RemoteDataSource(private val apiService: ApiService) {
     companion object {
         @Volatile
         private var instance: RemoteDataSource? = null
@@ -32,15 +32,14 @@ class RemoteDataSource private constructor(private val apiService: ApiService) {
         client.subscribeOn(Schedulers.computation())
             .observeOn(AndroidSchedulers.mainThread())
             .take(1)
-            .subscribe { response ->
+            .subscribe({ response ->
                 val dataArray = response
-                resultD.onNext(
-                    if (dataArray.isNotEmpty())
-                        ApiResponse.Success(dataArray)
-                    else
-                        ApiResponse.Empty
-                )
-            }
+                resultD.onNext(if (dataArray.isNotEmpty()) ApiResponse.Success(dataArray) else ApiResponse.Empty)
+            }, { error ->
+                resultD.onNext(ApiResponse.Error(error.message.toString()))
+                Log.e("RemoteDataSource", error.toString())
+            })
+
 
         return resultD.toFlowable((BackpressureStrategy.BUFFER))
 

@@ -5,6 +5,6 @@ import io.reactivex.Flowable
 import retrofit2.http.GET
 
 interface ApiService {
-    @GET("news/get?type=3")
+    @GET("api/news/get?type=3")
     fun getNewsList(): Flowable<NewsResponse>
 }
