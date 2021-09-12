@@ -8,4 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Lindungi Peduli"
 include ':app'
-include ':CORE'
+include ':core'
