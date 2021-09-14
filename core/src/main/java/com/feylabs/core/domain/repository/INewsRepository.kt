@@ -1,6 +1,6 @@
 package com.feylabs.core.domain.repository
 
-import com.dicoding.tourismapp.core.data.Resource
+import com.feylabs.core.data.Resource
 import com.feylabs.core.domain.model.News
 import io.reactivex.Flowable
 

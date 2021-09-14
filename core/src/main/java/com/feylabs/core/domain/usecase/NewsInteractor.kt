@@ -1,8 +1,6 @@
 package com.feylabs.core.domain.usecase
 
-import com.dicoding.tourismapp.core.data.Resource
-import com.feylabs.core.data.NewsRepository
-import com.feylabs.core.data.source.remote.response.NewsResponse
+import com.feylabs.core.data.Resource
 import com.feylabs.core.domain.model.News
 import com.feylabs.core.domain.repository.INewsRepository
 import io.reactivex.Flowable

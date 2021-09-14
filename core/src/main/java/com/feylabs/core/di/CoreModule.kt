@@ -1,7 +1,7 @@
 package com.feylabs.core.di
 
 import androidx.room.Room
-import com.dicoding.tourismapp.core.utils.AppExecutors
+import com.feylabs.core.utils.AppExecutors
 import com.feylabs.core.data.NewsRepository
 import com.feylabs.core.data.source.local.LocalDataSource
 import com.feylabs.core.data.source.local.room.MyRoomDatabase

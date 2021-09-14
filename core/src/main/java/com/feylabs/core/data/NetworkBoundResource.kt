@@ -1,6 +1,6 @@
-package com.dicoding.tourismapp.core.data
+package com.feylabs.core.data
 
-import com.dicoding.tourismapp.core.utils.AppExecutors
+import com.feylabs.core.utils.AppExecutors
 import com.feylabs.core.data.source.remote.network.ApiResponse
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable

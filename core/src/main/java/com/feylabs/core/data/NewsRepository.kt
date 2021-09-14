@@ -1,8 +1,6 @@
 package com.feylabs.core.data
 
-import com.dicoding.tourismapp.core.data.NetworkBoundResource
-import com.dicoding.tourismapp.core.data.Resource
-import com.dicoding.tourismapp.core.utils.AppExecutors
+import com.feylabs.core.utils.AppExecutors
 import com.feylabs.core.data.source.local.LocalDataSource
 import com.feylabs.core.data.source.remote.RemoteDataSource
 import com.feylabs.core.data.source.remote.network.ApiResponse

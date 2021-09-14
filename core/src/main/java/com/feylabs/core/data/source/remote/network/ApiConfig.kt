@@ -1,6 +1,5 @@
-package com.dicoding.tourismapp.core.data.source.remote.network
+package com.feylabs.core.data.source.remote.network
 
-import com.feylabs.core.data.source.remote.network.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
