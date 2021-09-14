@@ -25,9 +25,10 @@ class FavoriteFragment : Fragment() {
     private var _binding: FavoriteFragmentBinding? = null
     private val binding get() = _binding as FavoriteFragmentBinding
 
-    private val mAdapter by lazy { NewsFavoriteAdapter() }
+    private var mAdapter : NewsFavoriteAdapter? = null
 
     override fun onDestroyView() {
+        binding.rvFavNews.adapter = null;
         _binding = null
         super.onDestroyView()
     }
@@ -49,6 +50,8 @@ class FavoriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        mAdapter = NewsFavoriteAdapter()
+
         binding.rvFavNews.apply {
             adapter = mAdapter
             layoutManager = LinearLayoutManager(requireContext())
@@ -56,7 +59,7 @@ class FavoriteFragment : Fragment() {
 
         viewModel.getFavoriteNews()
 
-        mAdapter.setAdapterInterfacez(object : NewsFavoriteAdapter.NewsItemInterface {
+        mAdapter?.setAdapterInterfacez(object : NewsFavoriteAdapter.NewsItemInterface {
             override fun onclick(model: News?) {
                 findNavController().navigate(
                     com.feylabs.lindungipeduli.R.id.newsDetailFragment,
@@ -75,7 +78,7 @@ class FavoriteFragment : Fragment() {
             } else {
                 binding.imageError.visibility = View.GONE
             }
-            it.toMutableList().let { it1 -> mAdapter.setWithNewData(it1) }
+            it.toMutableList().let { it1 -> mAdapter?.setWithNewData(it1) }
         })
     }
 

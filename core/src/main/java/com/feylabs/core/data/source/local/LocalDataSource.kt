@@ -11,14 +11,6 @@ class LocalDataSource(
     private val myRoomDatabase: MyRoomDatabase
 ) {
 
-    companion object {
-        private var instance: LocalDataSource? = null
-
-        fun getInstance(db: MyRoomDatabase, context: Context): LocalDataSource =
-            instance ?: synchronized(this) {
-                instance ?: LocalDataSource(context, myRoomDatabase = db)
-            }
-    }
 
     fun getAllNews(): Flowable<List<NewsEntity>> = myRoomDatabase.newsDao().getAllNews()
 

@@ -24,4 +24,6 @@
     <string name="jaga_jarak">Jaga Jarak</string>
     <string name="lihat_item_tersimpan_disini">Lihat Item Berita Yang Kamu Simpan/Bookmark Disini</string>
     <string name="loading___">LOADING...</string>
+    <string name="tanggal">Tanggal :</string>
+    <string name="belum_ditambahkan_ke_bookmark_anda">Belum Ditambahkan ke Bookmark Anda</string>
 </resources>

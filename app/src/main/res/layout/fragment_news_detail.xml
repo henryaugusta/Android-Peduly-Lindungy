@@ -31,6 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
+                android:contentDescription="@string/content_desc"
                 android:src="@drawable/ranu_kumbolo" />
         </androidx.cardview.widget.CardView>
 
@@ -61,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:fontFamily="@font/jaldi_regular"
-            android:text="Tanggal : "
+            android:text="@string/tanggal"
             android:textColor="@color/color_blue_mine"
             android:textSize="16sp" />
 
@@ -84,6 +85,7 @@
                     android:background="@android:color/transparent"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:contentDescription="@string/content_desc"
                     android:src="@drawable/ic_bookmark"/>
             </androidx.cardview.widget.CardView>
 
@@ -95,7 +97,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginStart="20dp"
                 android:layout_toEndOf="@id/container_bookmark"
-                android:text="Belum Ditambahkan ke Bookmark Anda" />
+                android:text="@string/belum_ditambahkan_ke_bookmark_anda" />
 
         </RelativeLayout>
 
