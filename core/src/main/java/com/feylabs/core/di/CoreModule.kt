@@ -8,6 +8,8 @@ import com.feylabs.core.data.source.local.room.MyRoomDatabase
 import com.feylabs.core.data.source.remote.RemoteDataSource
 import com.feylabs.core.data.source.remote.network.ApiService
 import com.feylabs.core.domain.repository.INewsRepository
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -21,10 +23,14 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<MyRoomDatabase>().newsDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("razky_henry".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             MyRoomDatabase::class.java, "my-debe.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
     }
 }
 
