@@ -10,6 +10,7 @@ import com.feylabs.core.data.source.remote.network.ApiService
 import com.feylabs.core.domain.repository.INewsRepository
 import net.sqlcipher.database.SQLiteDatabase
 import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -18,6 +19,12 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
+
+
+
+
+
+
 
 
 val databaseModule = module {
@@ -44,11 +51,22 @@ val networkModule = module {
             .build()
     }
     single {
+        val hostname = "sawit-jaya.feylabs.my.id"
+
+        val certificatePinner: CertificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=")
+            .add(hostname, "sha256/IqcjJn7FefzRdSGPA+WajyJ8fTjz8LIuM+XTjXvePpg=")
+            .build()
+
+        val client1: OkHttpClient = OkHttpClient.Builder()
+            .certificatePinner(certificatePinner)
+            .build()
+
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://sawit-jaya.feylabs.my.id/")
+            .baseUrl("https://sawit-jaya.feylabs.my.id/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .client(get())
+            .client(client1)
             .build()
         retrofit.create(ApiService::class.java)
     }
