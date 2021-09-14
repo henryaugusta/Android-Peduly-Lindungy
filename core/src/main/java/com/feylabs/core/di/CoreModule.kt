@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<MyRoomDatabase>().newsDao() }
     single {
-        val passphrase: ByteArray = SQLiteDatabase.getBytes("razky_henry".toCharArray())
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("dicoding".toCharArray())
         val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
