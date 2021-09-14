@@ -6,11 +6,8 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 
--ignorewarnings
 
--keep class * {
-    public private *;
-}
+
 
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
@@ -71,6 +68,7 @@
 -keepclassmembers,allowshrinking,allowobfuscation interface * {
 @retrofit2.http.* <methods>;
 }
+-ignorewarnings
 
 # Ignore annotation used for build tooling.
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
