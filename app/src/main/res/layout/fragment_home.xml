@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/color_theme">
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="match_parent"
@@ -25,7 +24,6 @@
 
 
             <RelativeLayout
-                android:id="@+id/btnOpenAI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="13dp">
@@ -52,7 +50,6 @@
                     tools:ignore="RelativeOverlap" />
 
                 <TextView
-                    android:id="@+id/txt2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt1"
@@ -76,7 +73,6 @@
                 tools:listitem="@layout/item_news" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/containerCase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -122,7 +118,6 @@
                                 android:src="@drawable/ic_circle_indicator_orange" />
 
                             <TextView
-                                android:id="@+id/infected"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserrat_regular"
@@ -138,7 +133,6 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/infected_new"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
@@ -160,7 +154,6 @@
                                 android:src="@drawable/ic_circle_indicator_red" />
 
                             <TextView
-                                android:id="@+id/death"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
@@ -178,7 +171,6 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/death_new"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
@@ -200,7 +192,6 @@
                                 android:src="@drawable/ic_circle_indicator_green" />
 
                             <TextView
-                                android:id="@+id/recovered"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
@@ -216,7 +207,6 @@
                                 android:textSize="12sp" />
 
                             <TextView
-                                android:id="@+id/recovered_new"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto_regular"
@@ -350,11 +340,11 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/container_bookmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginBottom="30dp"
-                app:cardCornerRadius="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -362,38 +352,35 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/container_icon_bookmark"
-                        android:layout_margin="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="30dp"
-                        >
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="30dp">
 
                         <ImageView
-                            android:scaleType="fitXY"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:contentDescription="@string/content_desc"
                             android:padding="15dp"
-                            android:src="@drawable/ic_bookmark_checked"/>
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_bookmark_checked" />
 
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:id="@+id/label_item_saved"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/container_icon_bookmark"
+                        android:layout_centerInParent="true"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
+                        android:layout_toEndOf="@id/container_icon_bookmark"
                         android:fontFamily="@font/philosopher_b"
                         android:text="@string/lihat_item_tersimpan_disini"
                         android:textColor="@color/color_blue_mine"
-                        android:layout_centerInParent="true"
                         android:textSize="20sp" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
-
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>

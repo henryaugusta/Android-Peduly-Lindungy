@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Lindungi Peduli</string>
-    <string name="title_activity_main_menu_container">MainMenuContainer</string>
 
     <string name="menu_home">Home</string>
     <string name="sudah_vaksin">Sudah Vaksin ?</string>

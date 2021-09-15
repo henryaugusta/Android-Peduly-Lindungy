@@ -1,5 +1,6 @@
 package com.feylabs.favorite
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.feylabs.favorite.databinding.ItemNewsHorizontalBinding
 import com.feylabs.lindungipeduli.utils.MyHelper
 
+@SuppressLint("NotifyDataSetChanged")
 class NewsFavoriteAdapter : RecyclerView.Adapter<NewsFavoriteAdapter.NewsViewHolder>() {
 
     val data = mutableListOf<com.feylabs.core.domain.model.News>()

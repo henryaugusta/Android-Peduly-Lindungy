@@ -1,16 +1,7 @@
 <resources>
     <string name="app_name">Lindungi Peduli</string>
-    <string name="title_activity_main_menu_container">MainMenuContainer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
     <string name="sudah_vaksin">Sudah Vaksin ?</string>
     <string name="prixa">Perkuat rasa kepedulian kita antar sesama
     dengan vaksin untuk mencapai herd immunity</string>
@@ -19,13 +10,11 @@
     <string name="update_covid">Update Covid</string>
     <string name="meninggal">Meninggal</string>
     <string name="sembuh">Sembuh</string>
-    <string name="langkah_pencegahan">Langkah Pencegahan</string>
     <string name="_3_langkah_pencegahan">3 Langkah Pencegahan</string>
     <string name="title_detail_berita">Detail Berita</string>
     <string name="ditulis_oleh">\"Ditulis Oleh \"</string>
     <string name="peduly_lindungy">Peduly Lindungy</string>
     <string name="aplikasi_informasi_covid_19_indonesia_raya">Aplikasi Informasi Covid 19 Indonesia Raya</string>
-    <string name="illegal_state">Illegal State</string>
     <string name="not_yet_bookmark">Belum ditambahkan ke bookmark anda</string>
     <string name="already_added">Telah ada di bookmark anda</string>
     <string name="keindahan_ranu_kumbolo">Keindahan Ranu Kumbolo</string>
