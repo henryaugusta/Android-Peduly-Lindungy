@@ -81,6 +81,9 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
                         onFetchFailed()
                         result.onNext(Resource.Error(response.errorMessage, null))
                     }
+                    else ->{
+                        onFetchFailed()
+                    }
                 }
             }
     }
